@@ -69,21 +69,21 @@ export class News extends Component {
       <div className="container my-3">
         {/* <Navbar /> */}
         <h2>News app- Top Headlines</h2>
+    
         <div className="row">
-          <div className="col-md-4">
-            <Newsitem
-              title="myTitle"
-              description="mydesc"
-              url="https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1099495_800x450.jpg"
-              newsurl="todo"
-            />
-          </div>
-          <div className="col-md-4">
-            <Newsitem title="myTitle" description="mydesc" />
-          </div>
-          <div className="col-md-4">
-            <Newsitem title="myTitle" description="mydesc" />
-          </div>
+        {this.state.articles.map((element)=>{
+        return <div className="col-md-4"  key={element.url}>
+        <Newsitem
+       
+          title={element.title.slice(0,45)}
+          description={element.description.slice(0,85)}
+          url={element.urlToImage}
+          newsurl={element.url}
+        />
+      </div>
+        })}
+        
+          
         </div>
       </div>
     );
