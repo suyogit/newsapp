@@ -1,7 +1,8 @@
+//News.js
 //rces
 import React, { Component } from "react";
 import Newsitem from "./NewsItem";
-
+import Navbar from "./Navbar";
 export class News extends Component {
   // articles = [
   //   {
@@ -50,22 +51,21 @@ export class News extends Component {
 
   constructor() {
     super();
-    //console.log("I am a construcotr from News component");
+    console.log("I am a construcotr from News component");
     this.state = {
       //articles: this.articles,
       articles:[],
       loading: false,
     };
   }
-  async componentDidCatch(){
-    let url="https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=1ab7b5da78d9442ab0abe5ebdddaebc3"
-
-    let data= await fetch(url);
-    let parsedData= await data.json()
-    console.log(parsedData)
-this.setState({articles: parsedData.articles})
+  async componentDidMount() {
+    let url =
+      "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=1ab7b5da78d9442ab0abe5ebdddaebc3";
+    let data = await fetch(url);
+    let parsedData = await data.json();
+    console.log(parsedData);
+    this.setState({ articles: parsedData.articles });
   }
-
   render() {
     return (
       // <div>
@@ -76,23 +76,24 @@ this.setState({articles: parsedData.articles})
       // </div>
 
       <div className="container my-3">
-        {/* <Navbar /> */}
-        <h1>News app- Top Headlines</h1>
-    
+         <Navbar /> 
+        <h2>News app- Top Headlines</h2>
+
         <div className="row">
-        {this.state.articles.map((element)=>{
-        return <div className="col-md-4"  key={element.url}>
-        <Newsitem
-       
-          title={element.title?element.title.slice(0,45): ""}
-          description={element.description?element.description.slice(0,85):""}
-          imageurl={element.urlToImage}
-          newsurl={element.url}
-        />
-      </div>
-        })}
-        
-          
+          {this.state.articles.map((element) => {
+            return (
+              <div className="col-md-4" key={element.url}>
+                <Newsitem
+                  title={element.title ? element.title.slice(0, 45) : ""}
+                  description={
+                    element.description ? element.description.slice(0, 85) : ""
+                  }
+                  imageurl={element.urlToImage}
+                  newsurl={element.url}
+                />
+              </div>
+            )
+          })}
         </div>
       </div>
     );
@@ -100,3 +101,4 @@ this.setState({articles: parsedData.articles})
 }
 
 export default News;
+
