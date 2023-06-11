@@ -2,7 +2,7 @@
 //rces
 import React, { Component } from "react";
 import Newsitem from "./NewsItem";
-import Navbar from "./Navbar";
+//import Navbar from "./Navbar";
 import Spinner from "./Spinner";
 import PropTypes from 'prop-types'
 
