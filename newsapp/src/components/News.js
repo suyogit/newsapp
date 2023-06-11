@@ -91,6 +91,9 @@ this.setState({
                   }
                   imageurl={element.urlToImage}
                   newsurl={element.url}
+                  author={element.author}
+                  date={element.publishedAt}
+                  source={element.source.name}
                 />
               </div>
             )
