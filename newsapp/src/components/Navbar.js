@@ -12,7 +12,7 @@ export class Navbar extends Component {
       <div>
         <nav
           className="navbar navbar-expand-lg bg-body-tertiary "
-          style={{ backgroundColor: "black" }}
+          style={{ backgroundColor: "grey" }}
         >
           <div className="container-fluid">
             <Link className="navbar-brand"to="/">
@@ -42,37 +42,37 @@ export class Navbar extends Component {
 
                 <li className="nav-item">
                   <Link className="nav-link"to="/business">
-                    business
+                    Business
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link"to="/entertainment">
-                    entertainment
+                    Entertainment
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link"to="/general">
-                    general
+                    General
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link"to="/health">
-                    health
+                    Health
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link"to="/science">
-                    science
+                    Science
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link"to="/sports">
-                    sports
+                    Sports
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link"to="/technology">
-                    technology
+                    Technology
                   </Link>
                 </li>
               </ul>
