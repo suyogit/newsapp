@@ -36,3 +36,21 @@ export default class App extends Component {
     );
   }
 }
+
+
+/////////////////////////////////////////////////////////////////
+// React Component lifecylce
+// mounting
+// update 
+// unmount
+//render()
+// componentDidMount()
+// componentDidUpdate()
+// componentWillUnmount() 
+
+// Mounting->constructor->render->react update dom and refs ->Componentdidmount
+
+// updating->render->react update dom and refs->componentdidupdate 
+
+
+// unmounting->componentwillunmount
