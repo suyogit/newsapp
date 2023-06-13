@@ -1,17 +1,20 @@
 //rcep
 //import PropTypes from "prop-types";
-import React, { Component } from "react";
+//import React, { Component } from "react";
+import React from "react";
 import {
   Link
 } from "react-router-dom";
-export class Navbar extends Component {
-  //   static propTypes = {}
 
-  render() {
-    return (
+//export class Navbar extends Component {
+ const Navbar=()=>{
+
+ // render() 
+ {  
+ return (
       <div>
         <nav
-          className="navbar navbar-expand-lg bg-body-tertiary "
+          className="navbar fixed-top navbar-expand-lg bg-body-tertiary "
           style={{ backgroundColor: "grey" }}
         >
           <div className="container-fluid">

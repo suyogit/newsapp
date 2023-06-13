@@ -1,9 +1,13 @@
 //NewsItem.js
-import React, { Component } from "react";
+//import React, { Component } from "react";
+import React from "react";
 
-export class Newsitem extends Component {
-  render() {
-    let { title, description, imageurl, newsurl ,author,date,source} = this.props;
+//export class Newsitem extends Component {
+  //render() {
+  const Newsitem=(props)=>{
+    {  
+  //    let { title, description, imageurl, newsurl ,author,date,source} = this.props;
+      let { title, description, imageurl, newsurl ,author,date,source} =props;
     return (
 
         <div className="my-3">
